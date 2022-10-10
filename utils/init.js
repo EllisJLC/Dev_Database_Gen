@@ -2,6 +2,7 @@ module.exports = function init() {
   const inquirer = require('inquirer');
   const menu = require('./menu');
   let devs = [];
+  let interns = [];
   inquirer
     .prompt([
       {
@@ -27,6 +28,6 @@ module.exports = function init() {
       }
     ]).then (answers => {
       devs.push(answers);
-      menu(devs);
+      menu(devs,interns);
     })
 }

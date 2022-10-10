@@ -6,23 +6,23 @@ module.exports = function addDev(devs,interns) {
       {
         type: "input",
         name: "name",
-        message: "Developer name: ",
+        message: "Intern name: ",
       }, {
         type: "input",
         name: "id",
-        message: "Developer ID: ",
+        message: "Intern ID: ",
       }, {
         type: "input",
         name: "email",
-        message: "Developer email: ",
+        message: "Intern email: ",
       }, {
         type: "input",
-        name: "github",
-        message: "Github username: ",
+        name: "school",
+        message: "Intern school: ",
       }
     ])
     .then ((answers) => {
-      devs.push(answers)
+      intern.push(answers)
       const menu = require("./menu");
       menu(devs,interns)
     })
