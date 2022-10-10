@@ -1,8 +1,6 @@
 const inquirer = require('inquirer');
-const menu = require('./utils/menu');
+const init = require('./utils/init')
 
 console.log("Welcome to the database generator!")
 
-devs = [];
-
-menu(devs)
+init()
