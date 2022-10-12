@@ -1,5 +1,4 @@
-module.exports = function addDev(devs,interns) {
-  console.log(devs)
+function addIntern(employees) {
   const inquirer = require('inquirer');
   inquirer
     .prompt([
@@ -22,8 +21,11 @@ module.exports = function addDev(devs,interns) {
       }
     ])
     .then ((answers) => {
-      intern.push(answers)
+      const Intern = require("../lib/Intern");
       const menu = require("./menu");
-      menu(devs,interns)
+      employees.push(new Intern(answers,"Intern"));
+      menu(employees);
     })
 }
+
+module.exports = addIntern

@@ -1,7 +1,8 @@
 
-module.exports = function menu (devs, interns) {
+module.exports = function menu (employees) {
+  console.log(employees)
   const inquirer = require('inquirer');
-  const addDev = require('./addDev');
+  const addEngineer = require('./addEngineer');
   const addIntern = require('./addIntern')
   const html_maker = require('./html_maker');
   inquirer
@@ -10,16 +11,16 @@ module.exports = function menu (devs, interns) {
         type: 'list',
         name: 'select',
         message: 'Please select an option to continue.',
-        choices: ['Add new developer', 'Add new intern', 'Print HTML document'],
+        choices: ['Add new engineer', 'Add new intern', 'Print HTML document'],
       },
     ])
     .then(answers => {
-      if (answers.select === 'Add new developer') {
-        addDev(devs, interns);
+      if (answers.select === 'Add new engineer') {
+        addEngineer(employees);
       } else if (answers.select === 'Add new intern'){
-        addIntern(devs,interns);
+        addIntern(employees);
       } else {
-        html_maker(devs, interns);
+        html_maker(employees);
       }
     });
 }

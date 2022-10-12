@@ -1,29 +1,30 @@
-module.exports = function addDev(devs,interns) {
-  console.log(devs)
+module.exports = function addEngineer(employees) {
   const inquirer = require('inquirer');
   inquirer
     .prompt([
       {
         type: "input",
         name: "name",
-        message: "Developer name: ",
+        message: "Engineer name: ",
       }, {
         type: "input",
         name: "id",
-        message: "Developer ID: ",
+        message: "Engineer ID: ",
       }, {
         type: "input",
         name: "email",
-        message: "Developer email: ",
+        message: "Engineer email: ",
       }, {
         type: "input",
         name: "github",
         message: "Github username: ",
       }
     ])
-    .then ((answers) => {
-      devs.push(answers)
+    .then ((answers) => { 
+      const Engineer = require("../lib/Engineer");
       const menu = require("./menu");
-      menu(devs,interns)
+      employees.push(new Engineer(answers,"Engineer"))
+      console.log(employees)
+      menu(employees)
     })
 }

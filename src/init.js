@@ -1,8 +1,7 @@
 module.exports = function init() {
   const inquirer = require('inquirer');
   const menu = require('./menu');
-  let devs = [];
-  let interns = [];
+  let employees = [];
   inquirer
     .prompt([
       {
@@ -27,7 +26,8 @@ module.exports = function init() {
         message: "Manager's office number: "
       }
     ]).then (answers => {
-      devs.push(answers);
-      menu(devs,interns);
+      const Manager = require('../lib/Manager');
+      employees.push(new Manager(answers, "manager"));
+      menu(employees);
     })
 }
