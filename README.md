@@ -34,6 +34,8 @@ To create employee databases in HTML.
 
 Video preview: https://youtu.be/CvksItssGZ8
 
+Github repository: https://github.com/EllisJLC/Dev_Database_Gen
+
 ## Credits
 
 Created in full by Jia Liang (Ellison) Chen.
