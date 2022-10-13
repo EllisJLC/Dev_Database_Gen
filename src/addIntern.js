@@ -1,4 +1,4 @@
-function addIntern(employees) {
+module.exports = function addIntern(employees) {
   const inquirer = require('inquirer');
   inquirer
     .prompt([
@@ -28,4 +28,3 @@ function addIntern(employees) {
     })
 }
 
-module.exports = addIntern
