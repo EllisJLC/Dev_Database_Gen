@@ -28,6 +28,7 @@ module.exports = function init() {
     ]).then (answers => {
       const Manager = require('../lib/Manager');
       employees.push(new Manager(answers, "manager"));
+      console.log("Manager has been added.");
       menu(employees);
     })
 }

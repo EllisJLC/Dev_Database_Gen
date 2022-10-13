@@ -62,7 +62,7 @@ module.exports = function htmlText(employees) {
         <li><h3>${i+1}. Name: ${interns[i].name} </h3></li>
         <li> ID: ${interns[i].id} </li>
         <li> Email: <a href="mailto${interns[i].email}" target="_blank">${interns[i].email} </a></li>
-        <li> Github: <a href="https://github.com/${interns[i].github}">${interns[i].github}</a></li>
+        <li> School: ${interns[i].school}</li>
       </ul>
     </li>`;
     }
@@ -70,12 +70,10 @@ module.exports = function htmlText(employees) {
   </ul>`;
   }
   
-  text += `</ul>
+  text += `
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   </body>
   </html>`
-  console.log(engineers)
-  console.log(interns)
   return text;
 }

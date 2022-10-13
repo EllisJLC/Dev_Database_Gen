@@ -1,6 +1,4 @@
-
 module.exports = function menu (employees) {
-  console.log(employees)
   const inquirer = require('inquirer');
   const addEngineer = require('./addEngineer');
   const addIntern = require('./addIntern')
