@@ -23,8 +23,7 @@ module.exports = function addEngineer(employees) {
     .then ((answers) => { 
       const Engineer = require("../lib/Engineer");
       const menu = require("./menu");
-      employees.push(new Engineer(answers,"Engineer"))
-      console.log(employees)
-      menu(employees)
+      employees.push(new Engineer(answers,"Engineer"));
+      menu(employees);
     })
 }
