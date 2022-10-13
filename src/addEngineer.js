@@ -24,6 +24,7 @@ module.exports = function addEngineer(employees) {
       const Engineer = require("../lib/Engineer");
       const menu = require("./menu");
       employees.push(new Engineer(answers,"Engineer"));
+      console.log("New engineer has been added.");
       menu(employees);
     })
 }

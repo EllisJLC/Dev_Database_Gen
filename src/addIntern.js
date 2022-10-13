@@ -24,6 +24,7 @@ module.exports = function addIntern(employees) {
       const Intern = require("../lib/Intern");
       const menu = require("./menu");
       employees.push(new Intern(answers,"Intern"));
+      console.log("New intern has been added.");
       menu(employees);
     })
 }
